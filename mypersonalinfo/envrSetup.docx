@@ -1,0 +1,24 @@
+1.  npm init  // instaling the framework to add packages that are writen by other useres, instaling package.json file where we can check what packages did we install
+    point of refference(entry point) app.js //default set up
+    
+2.  npm install express --save      //express is the package that provides us communication with the server through routes (app.use(express.static("public"));)
+3.  npm install mongoose --save     // Mongose is the package with built in methodes to manipulate database
+4.  npm install body-parser --save  // It is a package that help us get the data out of the form, the form sents data out of the reqest body and we parse the request body using body-parser (app.use(bodyParser.urlencoded({extended:true}));)
+5.  npm install ejs --save          //package that is establishing ejs path for files so we dont have to write ejs extensions in the main app.js file(app.set("view engine","ejs");)
+
+6. creating app.js file inside dir
+7. Declaring variables for the packages ( require("nameOfThePacakage"))
+8. connecting packages and setting up Schema for mongoose
+(
+mongoose.connect("mongodb://localhost/name_of_new_database");
+var nameScehma = new mongoose.Schema({
+    list of objects
+})
+
+)
+
+9. setting up route for listener (
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("Server Has Started!");
+});
+)
